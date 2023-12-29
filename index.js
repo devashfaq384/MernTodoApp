@@ -11,6 +11,7 @@ app.use(cors({
   origin: 'https://mern-todo-frontend-sigma.vercel.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
+  optionsSuccessStatus: 204,
 }));
 app.use(express.json())
 
