@@ -11,7 +11,7 @@ connectToMongo()
 
 app.use(cors(
   {
-    origin: ['https://mern-todo-app-taupe-iota.vercel.app'],
+    origin: ['https://mern-todo-frontend-sigma.vercel.app/'],
     methods : [ GET , PUT , POST , DELETE ],
     credentials : true
   }
