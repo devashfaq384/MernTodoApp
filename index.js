@@ -7,15 +7,11 @@ const connectToMongo = require('./db')
 const cors = require('cors')
 
 connectToMongo()
-
-
-app.use(cors(
-  {
-    origin: ['https://mern-todo-frontend-sigma.vercel.app/'],
-    methods : [ GET , PUT , POST , DELETE ],
-    credentials : true
+const corsOPT = {
+      origin: 'https://mern-todo-frontend-sigma.vercel.app/',
   }
-));
+
+app.use(cors(corsOPT));
 app.use(express.json())
 
 
