@@ -7,11 +7,15 @@ const connectToMongo = require('./db')
 const cors = require('cors')
 
 connectToMongo()
-const corsOptions = {
-  origin: 'https://mern-todo-app-taupe-iota.vercel.app',
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors(
+  {
+    origin: ['https://mern-todo-app-taupe-iota.vercel.app'],
+    methods : [ GET , PUT , POST , DELETE ]
+    credentials : true
+  }
+));
 app.use(express.json())
 
 
