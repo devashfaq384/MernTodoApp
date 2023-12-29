@@ -8,7 +8,7 @@ const cors = require('cors')
 
 connectToMongo()
 const corsOPT = {
-      origin: 'https://mern-todo-frontend-sigma.vercel.app/',
+      origin: 'https://mern-todo-frontend-sigma.vercel.app',
   }
 
 app.use(cors(corsOPT));
